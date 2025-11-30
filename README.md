@@ -2,7 +2,7 @@
 
 A modern, responsive web application that recommends movies based on your current mood. Built with React, TypeScript, and Vite, powered by The Movie Database (TMDB) API.
 
-**Live Demo:** [https://arnovism.github.io/movie-mood/](https://arnovism.github.io/movie-mood/)
+**Live Demo:** [https://arnovism.github.io/vibecine/](https://arnovism.github.io/vibecine/)
 
 ## ✨ Features
 
@@ -25,7 +25,7 @@ A modern, responsive web application that recommends movies based on your curren
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ArnovisM/movie-mood.git
+git clone https://github.com/ArnovisM/vibecine.git
 cd movie-mood
 ```
 
