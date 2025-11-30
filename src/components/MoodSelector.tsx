@@ -1,6 +1,7 @@
 import React from 'react';
 import { moods, Mood } from '../services/moods';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import { Layers } from 'lucide-react';
 import DailyRecommendation from './DailyRecommendation';
 
 const MoodSelector: React.FC = () => {
@@ -22,8 +23,6 @@ const MoodSelector: React.FC = () => {
             </div>
 
             <DailyRecommendation />
-
-
 
             <div className="mood-grid">
                 {moods.map((mood) => (
@@ -63,6 +62,43 @@ const MoodSelector: React.FC = () => {
                         </div>
                     </button>
                 ))}
+            </div>
+
+            <div style={{ marginTop: '4rem', textAlign: 'center' }}>
+                <div className="glass" style={{
+                    padding: '3rem',
+                    borderRadius: '1.5rem',
+                    background: 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)',
+                    maxWidth: '600px',
+                    margin: '0 auto'
+                }}>
+                    <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>
+                        Feeling <span className="text-gradient">Complex?</span>
+                    </h2>
+                    <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '1.1rem' }}>
+                        Create a custom blend of moods to find movies that match your exact vibe.
+                    </p>
+                    <Link
+                        to="/mix"
+                        style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '0.75rem',
+                            padding: '1rem 2rem',
+                            borderRadius: '3rem',
+                            background: 'var(--primary)',
+                            color: 'white',
+                            fontSize: '1.1rem',
+                            fontWeight: '600',
+                            transition: 'transform 0.2s ease'
+                        }}
+                        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                    >
+                        <Layers size={20} />
+                        Create Custom Mix
+                    </Link>
+                </div>
             </div>
         </div>
     );

@@ -74,20 +74,20 @@ export interface Video {
     type: string;
 }
 
-export const getMoviesByMood = async (genreIds: number[], moodId: string, watchProviders: string = ''): Promise<Movie[]> => {
+export const getMoviesByMood = async (genreIds: number[], moodId: string, watchProviders: string = '', page: number = 1, genreSeparator: string = ','): Promise<Movie[]> => {
     if (!API_KEY) {
         console.warn("No API Key found, using mock data");
         return getMockMovies(moodId);
     }
 
     try {
-        const genreString = genreIds.join(',');
+        const genreString = genreIds.join(genreSeparator);
         const params: any = {
             with_genres: genreString,
             sort_by: 'vote_average.desc',
             'vote_count.gte': 200,
             include_adult: false,
-            page: 1,
+            page: page,
             watch_region: 'US'
         };
 

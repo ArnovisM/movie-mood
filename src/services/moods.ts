@@ -57,3 +57,17 @@ export const moods: Mood[] = [
         description: "Keep me guessing."
     }
 ];
+
+export const extendedMoods: Mood[] = [
+    ...moods,
+    { id: 'chill', label: 'Chill', emoji: '😌', color: '#4ADE80', genreIds: [35, 10751], description: 'Easy watching' },
+    { id: 'mind-bending', label: 'Mind-bending', emoji: '🤯', color: '#A855F7', genreIds: [878, 9648, 53], description: 'Make me think' },
+    { id: 'dark', label: 'Dark', emoji: '🌑', color: '#475569', genreIds: [80, 18, 9648], description: 'Gritty and serious' },
+    { id: 'adrenaline', label: 'Adrenaline', emoji: '⚡', color: '#EF4444', genreIds: [28, 12], description: 'High octane action' },
+    { id: 'feel-good', label: 'Feel-good', emoji: '✨', color: '#FBBF24', genreIds: [35, 10402, 10749], description: 'Lift my spirits' },
+    { id: 'weird', label: 'Weird', emoji: '👽', color: '#10B981', genreIds: [878, 14, 27], description: 'Something different' },
+    { id: 'classic', label: 'Classic', emoji: '🎞️', color: '#94A3B8', genreIds: [37, 36], description: 'Old school vibes' },
+    { id: 'educational', label: 'Educational', emoji: '🧠', color: '#3B82F6', genreIds: [99, 36], description: 'Learn something new' },
+    { id: 'fantasy', label: 'Fantasy', emoji: '🧚', color: '#EC4899', genreIds: [14, 12], description: 'Magic and wonder' },
+    { id: 'epic', label: 'Epic', emoji: '⚔️', color: '#F59E0B', genreIds: [12, 28, 36], description: 'Grand scale stories' },
+];

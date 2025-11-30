@@ -1,10 +1,12 @@
-import React from 'react';
-import { Film, Sun, Moon } from 'lucide-react';
+import React, { useState } from 'react';
+import { Film, Sun, Moon, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
+import SuggestionBox from './SuggestionBox';
 
 const Navbar: React.FC = () => {
     const { theme, toggleTheme } = useTheme();
+    const [isSuggestionOpen, setIsSuggestionOpen] = useState(false);
 
     return (
         <>
@@ -29,6 +31,19 @@ const Navbar: React.FC = () => {
                     </Link>
 
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+                        <button
+                            onClick={() => setIsSuggestionOpen(true)}
+                            style={{
+                                color: 'var(--text-secondary)',
+                                fontWeight: '500',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.5rem'
+                            }}
+                        >
+                            <MessageSquare size={18} />
+                            <span style={{ display: 'none', '@media (min-width: 640px)': { display: 'inline' } } as any}>Suggestions</span>
+                        </button>
                         <Link to="/watchlist" style={{ color: 'var(--text-secondary)', fontWeight: '500' }}>
                             Watchlist
                         </Link>
@@ -39,7 +54,7 @@ const Navbar: React.FC = () => {
                 </div>
             </nav>
 
-
+            <SuggestionBox isOpen={isSuggestionOpen} onClose={() => setIsSuggestionOpen(false)} />
         </>
     );
 };

@@ -2,6 +2,7 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import MoodSelector from './components/MoodSelector';
+import MoodMixer from './components/MoodMixer';
 import MovieGrid from './components/MovieGrid';
 import MovieDetails from './components/MovieDetails';
 import Watchlist from './components/Watchlist';
@@ -16,6 +17,8 @@ function App() {
                     <Navbar />
                     <Routes>
                         <Route path="/" element={<MoodSelector />} />
+                        <Route path="/mix" element={<MoodMixer />} />
+                        <Route path="/recommendations/mix" element={<MovieGrid />} />
                         <Route path="/recommendations/:moodId" element={<MovieGrid />} />
                         <Route path="/movie/:id" element={<MovieDetails />} />
                         <Route path="/watchlist" element={<Watchlist />} />
