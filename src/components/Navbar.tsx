@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
                 }}>
                     <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '1.5rem', fontWeight: 'bold' }}>
                         <Film color="var(--primary)" />
-                        <span className="text-gradient">MovieMood</span>
+                        <span className="text-gradient">VibeCine</span>
                     </Link>
 
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>

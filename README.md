@@ -1,4 +1,4 @@
-# 🎬 MovieMood
+# 🎬 VibeCine
 
 A modern, responsive web application that recommends movies based on your current mood. Built with React, TypeScript, and Vite, powered by The Movie Database (TMDB) API.
 

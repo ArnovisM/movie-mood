@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
                         color: 'var(--text-muted)',
                         marginTop: '0.5rem'
                     }}>
-                        © {new Date().getFullYear()} MovieMood. All rights reserved.
+                        © {new Date().getFullYear()} VibeCine. All rights reserved.
                     </div>
                 </div>
             </div>
